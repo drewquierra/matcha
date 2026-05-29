@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox
+    xmlns="http://javafx.com/javafx/17"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.matcha.controller.LoginController"
+    alignment="CENTER"
+    spacing="0"
+    style="-fx-background-color: #E8F5E9;"
+    prefWidth="480"
+    prefHeight="380">
+
+    <!-- ── Top accent bar ── -->
+    <Region prefHeight="6" prefWidth="480"
+            style="-fx-background-color: #A5D6A7;"/>
+
+    <!-- ── Card container ── -->
+    <VBox alignment="CENTER" spacing="22" maxWidth="340"
+          style="-fx-background-color: white;
+                 -fx-background-radius: 14;
+                 -fx-border-color: #C8E6C9;
+                 -fx-border-radius: 14;
+                 -fx-border-width: 1.5;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 18, 0, 0, 4);">
+        <VBox.margin>
+            <Insets top="40" right="0" bottom="40" left="0"/>
+        </VBox.margin>
+        <padding>
+            <Insets top="36" right="40" bottom="36" left="40"/>
+        </padding>
+
+        <!-- App icon + title -->
+        <VBox alignment="CENTER" spacing="6">
+            <Label text="&#x1F375;" style="-fx-font-size: 42px;"/>
+            <Label text="Matcha Tracker"
+                   style="-fx-font-size: 24px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #2E7D32;"/>
+            <Label text="Track your daily green tea journey"
+                   style="-fx-font-size: 12px;
+                          -fx-text-fill: #81C784;"/>
+        </VBox>
+
+        <!-- Divider -->
+        <Region prefHeight="1" prefWidth="260"
+                style="-fx-background-color: #E8F5E9;"/>
+
+        <!-- Username field -->
+        <VBox spacing="6">
+            <Label text="USERNAME"
+                   style="-fx-font-size: 10px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #9E9E9E;
+                          -fx-letter-spacing: 1.2;"/>
+            <TextField fx:id="usernameField"
+                       promptText="Enter your username"
+                       style="-fx-background-color: #F9FBE7;
+                              -fx-border-color: #C8E6C9;
+                              -fx-border-radius: 8;
+                              -fx-background-radius: 8;
+                              -fx-border-width: 1.5;
+                              -fx-padding: 10 14;
+                              -fx-font-size: 13px;
+                              -fx-text-fill: #424242;"
+                       prefWidth="260"/>
+        </VBox>
+
+        <!-- Password field -->
+        <VBox spacing="6">
+            <Label text="PASSWORD"
+                   style="-fx-font-size: 10px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #9E9E9E;
+                          -fx-letter-spacing: 1.2;"/>
+            <PasswordField fx:id="passwordField"
+                           promptText="Enter your password"
+                           style="-fx-background-color: #F9FBE7;
+                                  -fx-border-color: #C8E6C9;
+                                  -fx-border-radius: 8;
+                                  -fx-background-radius: 8;
+                                  -fx-border-width: 1.5;
+                                  -fx-padding: 10 14;
+                                  -fx-font-size: 13px;
+                                  -fx-text-fill: #424242;"
+                           prefWidth="260"/>
+        </VBox>
+
+        <!-- Login button -->
+        <Button fx:id="loginButton"
+                text="Log In"
+                onAction="#handleLogin"
+                prefWidth="260"
+                style="-fx-background-color: #FFCDD2;
+                       -fx-text-fill: #5D4037;
+                       -fx-font-size: 14px;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 9;
+                       -fx-border-radius: 9;
+                       -fx-padding: 11 0;
+                       -fx-cursor: hand;
+                       -fx-effect: dropshadow(gaussian, rgba(255,205,210,0.5), 8, 0, 0, 2);"/>
+
+        <!-- Status / error label -->
+        <Label fx:id="statusLabel"
+               text=""
+               wrapText="true"
+               maxWidth="260"
+               alignment="CENTER"
+               style="-fx-font-size: 12px;
+                      -fx-text-fill: #C62828;
+                      -fx-alignment: center;"/>
+
+    </VBox>
+
+</VBox>
